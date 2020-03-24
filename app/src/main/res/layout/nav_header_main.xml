@@ -10,36 +10,63 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="48dp"
+        android:id="@+id/profilePicNavHdr"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtnNavHdr"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/profiledefault" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nameNavHdr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
+        android:text="LawrenceV"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/profilePicNavHdr"
+        app:layout_constraintTop_toTopOf="@+id/profilePicNavHdr"
         tools:text="LawrenceV" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/loginBtnNavHdr"
         android:layout_width="222dp"
         android:layout_height="23dp"
-        android:text="@string/nav_header_subtitle"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:text="lawrence@ChatUp.com"
+        app:layout_constraintStart_toStartOf="@+id/nameNavHdr"
+        app:layout_constraintTop_toBottomOf="@+id/nameNavHdr"
         tools:text="lawrence@chatup.com" />
+
+    <Button
+        android:id="@+id/loginBtnNavHdr"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="loginBtnNavClicked"
+        android:text="LOGIN"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addChannelBtnNavHdr"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="addChannelBtnNavClicked"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/addchannelbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
