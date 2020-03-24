@@ -1,5 +1,6 @@
 package com.lawrencevalencia.chatup
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
     fun loginSignUpBtnClicked (view:View) {
-
+        val createUserIntent = Intent(this, CreateUserActivity::class.java)
+        startActivity(createUserIntent)
     }
 }
