@@ -1,9 +1,16 @@
-package com.lawrencevalencia.chatup
+package com.lawrencevalencia.chatup.Controller
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.lawrencevalencia.chatup.R
+import com.lawrencevalencia.chatup.Services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -48,5 +55,32 @@ class CreateUserActivity : AppCompatActivity() {
         avatarColor = "[$saveRed, $saveGrn, $saveBlue, 1]"
     }
 
-    fun createCreateUserBtnClick (view: View){}
+    fun createCreateUserBtnClick (view: View){
+//        AuthService.registerUser(this, "RegUser@api.com", "123456") {
+//            complete-> if (complete) {
+//        }
+//        }
+
+        val textView = "test"
+// ...
+
+// Instantiate the RequestQueue.
+        val queue = Volley.newRequestQueue(this)
+        val url = "http://www.google.com"
+
+// Request a string response from the provided URL.
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            Response.Listener<String> { response ->
+                // Display the first 500 characters of the response string.
+                Toast.makeText(this, "WORKED", Toast.LENGTH_LONG).show()
+            },
+            Response.ErrorListener { error ->
+            Toast.makeText(this, "ERROR: $error", Toast.LENGTH_LONG).show()
+            })
+
+// Add the request to the RequestQueue.
+        queue.add(stringRequest)
+
+    }
 }

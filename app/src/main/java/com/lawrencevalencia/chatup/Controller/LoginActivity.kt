@@ -1,4 +1,4 @@
-package com.lawrencevalencia.chatup
+package com.lawrencevalencia.chatup.Controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
